@@ -19,7 +19,7 @@ eksctl create nodegroup --cluster=eks-cicd-dev-cluster \
                         --nodes-max=3 \
                         --node-volume-size=10 \
                         --ssh-access \
-                        --ssh-public-key=kube-demo \
+                        --ssh-public-key=ekwe-key-pair \
                         --managed \
                         --asg-access \
                         --external-dns-access \
