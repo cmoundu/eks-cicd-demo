@@ -1,3 +1,12 @@
+### Install kubectl
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+
+ ## Then make directory to move the kubectl
+chmod +x kubectl
+mkdir -p ~/.local/bin/kubectl
+mv ./kubectl ~/.local/bin/kubectl
+
+
 # To create the EKS cluster without nodegroup
 eksctl create cluster --name=eks-cicd-dev-cluster \
                       --region=us-east-1 \
