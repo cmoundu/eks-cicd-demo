@@ -1,5 +1,8 @@
 ### Install kubectl
-## Download kubectl letest release binary. download from the AWS link. it will look like the one below
+## Download kubectl letest release binary. download from the AWS link. higlight the link below to open the AWS Kubectl binary link for download
+https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html
+
+### it will look like the one below
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 
 ### Validate the binary by downloading kubectl checksum file
@@ -28,12 +31,15 @@ kubectl version --client
 
 kubectl version --client --output=yaml   
 
- ## Then make directory to move the kubectl
-chmod +x kubectl
-mkdir -p ~/.local/bin/kubectl
-mv ./kubectl ~/.local/bin/kubectl
+## Download EKSctl letest release binary. download from the AWS link. higlight the link below to open the AWS EKSctl binary link for download
+https://docs.aws.amazon.com/eks/latest/userguide/eksctl.html
 
+#### INSTALL GIT
+sudo yum install git -y
 
+### Setup EKS cluster & node groups
+### EKS cluster setup
+### Run the below command to create an EKS cluster
 # To create the EKS cluster without nodegroup
 eksctl create cluster --name=eks-cicd-dev-cluster \
                       --region=us-east-1 \
